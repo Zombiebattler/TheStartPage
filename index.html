@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<script> 
+
+    function Search() {
+
+        let search = document.querySelector("#inpot").value;
+
+        window.open(`https://www.google.com/search?q=${search}`);
+
+
+    }
+
+
+</script>
+
+<body>
+    <div class="div0">
+        <div class="div1">
+            <div class="divwetter">
+                <h1></h1>
+                <iframe width='300' height='365' name='FC3' style='border:1px solid;background-color: #222; border-color:transparent;' src='https://api.wetteronline.de/wetterwidget?gid=10737&modeid=FC3&seourl=baden-baden/steinbach&locationname=Steinbach&lang=de'></iframe>
+            </div>
+            <div id="sc-container" class="divnarichten">
+                <h1>
+                    <div id="sc-branding" class="sc-bb">
+                        <a target="_blank" href="https://www.speedcheck.org/">
+                            <img src="https://cdn.speedcheck.org/branding/speedcheck-logo-18.png" alt="Speedcheck"/>
+                        </a>
+                    </div>
+                </h1>
+            </div>
+            <script src="https://cdn.speedcheck.org/basic/scbjs.min.js" async></script>
+        </div>
+        <div class="div2">
+            <div class="divsuche">
+                <h2>Hallo Leon</h2>
+                <h1></h1>
+                <input class="input1" name="suche" id="inpot" onfocus="this.value=''" > <!--onfocus="this.value=''"-->
+            <div class="divfreespace">
+                <h1></h1>
+            </div>
+        </div>
+        <div class="div3">
+            <div class="divhandy">
+                <!--<input class="inputyt">
+                <input class="inputhandy">
+                <button class="button1">Senden</button>-->
+            </div>
+            <div class="divyoutube">
+                <!--<h1>Youtube Suche</h1>
+                <input class="inputyt">-->
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+
+
+
+var input = document.getElementById("inpot");
+input.addEventListener("keypress", function(event) {
+if (event.key === "Enter") {
+    Search();
+}
+})
+
+</script>
+</html>
