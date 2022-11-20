@@ -1,80 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startseite</title>
-    <link href="index.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startseite</title>
+  <link href="index.css" rel="stylesheet" type="text/css">
 
 
 </head>
-<script> 
+<script>
 
-    function Search() {
+  function Search() {
 
-        let search = document.querySelector("#inpot").value;
+    let search = document.querySelector("#inpot").value;
+    window.open(`https://www.google.com/search?q=${search}`);
+  }
 
-        window.open(`https://www.google.com/search?q=${search}`);
 
+  var myNodelist = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
+  }
 
+  var close = document.getElementsByClassName("close");
+  var i;
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      var div = this.parentElement;
+      div.style.display = "none";
     }
+  }
+
+  var list = document.querySelector('ul');
+  list.addEventListener('click', function (ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  }, false);
+
+
+
+  function add() {
+    let inputValue = prompt("Hinzufügen", "")
+    var li = document.createElement("li");
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function () {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
 
 
 </script>
 
 <body>
-    <div class="div0">
-        <div class="div1">
-            <div class="divwetter">
-                <h1></h1>
-                <iframe width='300' height='365' name='FC3' style='border:1px solid;background-color: #222; border-color:transparent;' src='https://api.wetteronline.de/wetterwidget?gid=10737&modeid=FC3&seourl=baden-baden/steinbach&locationname=Steinbach&lang=de'></iframe>
-            </div>
-            <div id="sc-container" class="divnarichten">
-                <h1>
-                    <div id="sc-branding" class="sc-bb">
-                        <a target="_blank" href="https://www.speedcheck.org/">
-                            <img src="https://cdn.speedcheck.org/branding/speedcheck-logo-18.png" alt="Speedcheck"/>
-                        </a>
-                    </div>
-                </h1>
-            </div>
-            <script src="https://cdn.speedcheck.org/basic/scbjs.min.js" async></script>
+  <div class="div0">
+    <div class="div1">
+      <div class="divwetter">
+        <iframe width='300' height='365' name='FC3'
+          style='border:1px solid;background-color: #222; border-color:transparent;'
+          src='https://api.wetteronline.de/wetterwidget?gid=10737&modeid=FC3&seourl=baden-baden/steinbach&locationname=Steinbach&lang=de'></iframe>
+        <p><h6><a onclick="window.open('https://replit.com/@leonkoelmel/TheStartPage#index.html')">Open Code</h6>
+      </div>
+      <div id="sc-container" class="divnarichten">
+        <h1>
+          <div id="sc-branding" class="sc-bb">
+            <a target="_blank" href="https://www.speedcheck.org/">
+              <img alt="Speedcheck" />
+            </a>
+          </div>
+        </h1>
+      </div>
+      <script src="https://cdn.speedcheck.org/basic/scbjs.min.js" async></script>
+    </div>
+    <div class="div2">
+      <div class="divsuche">
+        <h2>Hallo</h2>
+        <h1></h1>
+        <input class="input1" name="suche" id="inpot" onfocus="this.value=''">
+        <!--onfocus="this.value=''"-->
+        <div class="abc">
+          <div class="druf" <a onclick="window.open('https://www.youtube.com')">
+            <h1>Youtube</h1>
+          </div>
+          <div class="druf" <a onclick="window.open('https://www.disneyplus.com/de-de/home')">
+            <h1>Disney</h1>
+          </div>
+          <div class="druf" <a onclick="window.open('https://www.amazon.de/Amazon-Video/b?ie=UTF8&node=3010075031')">
+            <h1>Amazon Video</h1>
+          </div>
+          <div class="druf" <a onclick="window.open('https://mail.google.com/mail/u/0/#inbox')">
+            <h1>Gmail</h1>
+          </div>
         </div>
-        <div class="div2">
-            <div class="divsuche">
-                <h2>Hallo Leon</h2>
-                <h1></h1>
-                <input class="input1" name="suche" id="inpot" onfocus="this.value=''" > <!--onfocus="this.value=''"-->
-            <div class="divfreespace">
-                <h1></h1>
-            </div>
+        <div class="divfreespace">
         </div>
-        <div class="div3">
-            <div class="divhandy">
-                <!--<input class="inputyt">
-                <input class="inputhandy">
-                <button class="button1">Senden</button>-->
-            </div>
-            <div class="divyoutube">
-                <!--<h1>Youtube Suche</h1>
-                <input class="inputyt">-->
-            </div>
-        </div>
+      </div>
+    </div>
+    <div class="div3">
+      <div>
+        <button class="addtodo" onclick="add()">Add...</button>
+      </div>
+      <div id="todo">
+        <ul id="myUL">
+          <li>Test</li>
+
+
+
+        </ul>
+      </div>
     </div>
 </body>
 
 
 <script>
 
-
-
-var input = document.getElementById("inpot");
-input.addEventListener("keypress", function(event) {
-if (event.key === "Enter") {
-    Search();
-}
-})
+  var input = document.getElementById("inpot");
+  input.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      Search();
+    }
+  })
 
 </script>
+
 </html>
