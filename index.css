@@ -1,7 +1,7 @@
 body {
     background-color: #222;
     /*background-image: url("https://wallpaperaccess.com/full/51364.jpg");*/
-    background-image: url("https://picsum.photos/1920/1080");
+    background-image: url("https://cdn.discordapp.com/attachments/1017242896795172984/1027321957793935532/Lukas09_Battle_in_Stalingrad_0982c2fb-6efe-48b3-861b-7cf3327c8fe1.png");
 }
 
 
@@ -45,9 +45,10 @@ h2 {
 
 .div3 {
     /*border: 5px solid red;*/
-    float: left;
+    float: right;
     max-height: 100%;
-    width: 33%;
+    max-width: 32%;
+  color: #ffffff;
 }
 
 .divwetter {
@@ -71,9 +72,11 @@ h2 {
 }
 
 .divhandy{
-    max-height: 50%;
-    text-align: right;
-    margin-bottom: 50%;
+  
+  max-height: 100%;
+  text-align: right;
+  
+  
 }
 
 .divyoutube {
@@ -86,9 +89,13 @@ h2 {
 
 
 .input1 {
-    border: 1px solid white;
-    border-radius: 40px;
-    background-color: #222;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0px;
+    background-color: #ffffff00;
     color: white;
     height: 60px;
     width: 100%;
@@ -129,9 +136,58 @@ h2 {
     text-align: center;
 }
 
+.abc {
+  margin-top: 100px;
+  text-align: center;
+  border: 0ch solid black;
+  border-radius: 5px;
+  
+}
+
+a {
+  color: white;
+  transition: 0.2s;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+.druf {
+  margin-top: 10px;
+  border: 1px solid white;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+.druf:hover {
+  transform: scale(1.1);
+  
+}
+
+
+.addtodo {
+  background-color: #ffffff00;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  
+  transition: 0.2s;
+  
+}
+
+.addtodo:active {
+  transform: scale(5);
+}
+
+.addtodo:hover {
+  transform: scale(1);
+}
+
 
 /*---------andere--------*/
 
    
 #sc-container {
-    }
+    
+}
